@@ -12,22 +12,22 @@ export default function Home() {
         {/* Home timeline */}
         <MainComponent />
         {/* Right panel */}
-        <section className=" flex-3 sticky top-2 overflow-y-auto mt-2 flex-col items-stretch h-[90vh] overflow-x-hidden px-6 hidden xl:flex">
+        <section className=" flex-3 min-w-fit sticky top-2 overflow-y-auto mt-2 flex-col items-stretch h-[90vh] overflow-x-hidden px-6 hidden xl:flex">
           {/* Search Bar */}
-          <div>
-            <div className=" relative w-full h-full">
-              <label
-                htmlFor="search-box"
-                className=" absolute top-0 left-0 h-full flex items-center justify-center"
-              >
-                <BsSearchHeart className=" w-5 h-5 text-gray-500" />
-              </label>
+          <div className=" ">
+            <div className=" relative w-full h-full group">
               <input
                 id="search-box"
-                className=" w-full h-full rounded-xl p-4 pl-8 outline-none border-none bg-transparent"
+                className=" peer w-full h-full rounded-3xl p-4 pl-10 outline-none bg-neutral-800/90 focus:border-2 focus:border-twitterblue"
                 type="text"
                 placeholder="Search Twitter"
               />
+              <label
+                htmlFor="search-box"
+                className=" absolute top-0 left-3 h-full flex items-center justify-center text-gray-400 peer-focus:text-twitterblue"
+              >
+                <BsSearchHeart className=" w-5 h-5 " />
+              </label>
             </div>
           </div>
           {/* Trending */}

@@ -55,7 +55,7 @@ function MainComponent() {
                   </div>
                   <div>1 hour ago</div>
                 </div>
-                <div>
+                <div className=" cursor-pointer rounded-full hover:bg-white/20 p-3 transition duration-200">
                   <BsThreeDots />
                 </div>
               </div>
