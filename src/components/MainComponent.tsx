@@ -10,7 +10,7 @@ import { AiOutlineRetweet } from "react-icons/ai";
 
 function MainComponent() {
   return (
-    <main className=" ml-72 flex w-full max-w-[600px] h-full min-h-screen flex-col border-x-[0.5px] border-gray-600">
+    <main className=" flex w-full h-full min-h-screen flex-col border-l-[0.5px] border-r-[0.5px] border-gray-600">
       <h1 className="text-xl font-bold p-6 backdrop-blur bg-white/10 sticky top-0">
         Home
       </h1>

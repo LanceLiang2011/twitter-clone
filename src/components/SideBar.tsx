@@ -21,8 +21,8 @@ const NAV_ITEMS = [
 
 function SideBar() {
   return (
-    <section className=" fixed w-72 flex flex-col items-stretch h-screen pr-6">
-      <div className=" h-full flex flex-col items-stretch mt-4 gap-2">
+    <section className=" w-[23%] sticky top-0 xl:flex flex-col items-stretch h-screen hidden mr-4">
+      <div className=" h-full flex flex-col items-stretch mt-4 gap-4">
         {/* <Link href={`/`} className=" my-4 px-6">
       <BsTwitter size={24} />
     </Link> */}
