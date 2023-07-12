@@ -1,6 +1,14 @@
 import SideBar from "@/components/SideBar";
 
-import { BsThreeDots } from "react-icons/bs";
+import {
+  BsThreeDots,
+  BsChatHeart,
+  BsHeart,
+  BsBarChart,
+  BsArchive,
+  BsDot,
+} from "react-icons/bs";
+import { AiOutlineRetweet } from "react-icons/ai";
 
 export default function Home() {
   return (
@@ -9,7 +17,7 @@ export default function Home() {
         {/* Side Bar */}
         <SideBar />
         {/* Home timeline */}
-        <main className=" ml-72 flex w-full h-full min-h-screen flex-col border-x-[0.5px] border-gray-600">
+        <main className=" ml-72 flex w-full max-w-[600px] h-full min-h-screen flex-col border-x-[0.5px] border-gray-600">
           <h1 className="text-xl font-bold p-6 backdrop-blur bg-white/10 sticky top-0">
             Home
           </h1>
@@ -45,16 +53,21 @@ export default function Home() {
                 {/* content */}
                 <div className=" flex flex-col gap-2">
                   {/* tweet metadata */}
-                  <div className=" flex items-center gap-1">
-                    <div className=" font-bold">Lance Liang</div>
-                    <div>@lancexliang</div>
+                  <div className=" flex items-center ">
+                    <div className=" w-full flex gap-1 text-gray-600">
+                      <div className=" font-bold text-white">Lance Liang</div>
+                      <div>@lancexliang</div>
+                      <div>
+                        <BsDot />
+                      </div>
+                      <div>1 hour ago</div>
+                    </div>
                     <div>
                       <BsThreeDots />
                     </div>
-                    <div>1 hour ago</div>
                   </div>
                   {/* tweet text contents */}
-                  <div>
+                  <div className=" text-md">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Impedit minus amet possimus natus nihil in, perferendis
                     dolor reiciendis! Eos saepe excepturi fuga quas aliquam?
@@ -66,12 +79,22 @@ export default function Home() {
                   {/* tweet media */}
                   <div className=" bg-slate-400 aspect-square w-full h-96 rounded-xl"></div>
                   {/* retweet groups */}
-                  <div className=" flex items-center gap-2 w-full">
-                    <div>C</div>
-                    <div>R</div>
-                    <div>L</div>
-                    <div>S</div>
-                    <div>Sh</div>
+                  <div className=" flex items-center justify-around w-full">
+                    <div className=" cursor-pointer rounded-full hover:bg-white/20 p-3 transition duration-200">
+                      <BsChatHeart />
+                    </div>
+                    <div className=" cursor-pointer rounded-full hover:bg-white/20 p-3 transition duration-200">
+                      <AiOutlineRetweet />
+                    </div>
+                    <div className=" cursor-pointer rounded-full hover:bg-white/20 p-3 transition duration-200">
+                      <BsHeart />
+                    </div>
+                    <div className=" cursor-pointer rounded-full hover:bg-white/20 p-3 transition duration-200">
+                      <BsBarChart />
+                    </div>
+                    <div className=" cursor-pointer rounded-full hover:bg-white/20 p-3 transition duration-200">
+                      <BsArchive />
+                    </div>
                   </div>
                 </div>
               </div>
