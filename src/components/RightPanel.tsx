@@ -43,7 +43,7 @@ function RightPanel() {
           {Array.from({ length: 4 }).map((_, i) => (
             <div
               key={i}
-              className=" w-full hover:bg-white/10 p-2 justify-around flex items-center last:rounded-b-xl transition duration-200"
+              className=" w-full hover:bg-white/10 p-2 flex justify-around items-center gap-2 last:rounded-b-xl transition duration-200"
             >
               {/* avatar */}
               <div className=" w-10 h-10 bg-neutral-600 rounded-full"></div>
@@ -53,7 +53,7 @@ function RightPanel() {
                 <div className=" text-gray-500 text-xs">@baduser123</div>
               </div>
               {/* follow btn */}
-              <button className=" rounded-full py-2 px-3 bg-white text-neutral-900 hover:bg-opacity-80">
+              <button className=" rounded-full py-1 px-3 bg-white text-neutral-900 hover:bg-opacity-80">
                 Follow
               </button>
             </div>
