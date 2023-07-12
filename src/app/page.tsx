@@ -12,7 +12,7 @@ export default function Home() {
         {/* Home timeline */}
         <MainComponent />
         {/* Right panel */}
-        <section className=" w-full sticky top-2 overflow-y-auto mt-2 flex-col items-stretch h-[90vh] overflow-x-hidden px-6 hidden xl:flex">
+        <section className=" flex-3 sticky top-2 overflow-y-auto mt-2 flex-col items-stretch h-[90vh] overflow-x-hidden px-6 hidden xl:flex">
           {/* Search Bar */}
           <div>
             <div className=" relative w-full h-full">
