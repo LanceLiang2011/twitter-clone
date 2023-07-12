@@ -53,7 +53,7 @@ function RightPanel() {
                 <div className=" text-gray-500 text-xs">@baduser123</div>
               </div>
               {/* follow btn */}
-              <button className=" rounded-full py-2 px-4 bg-white text-neutral-900 hover:bg-opacity-80">
+              <button className=" rounded-full py-2 px-3 bg-white text-neutral-900 hover:bg-opacity-80">
                 Follow
               </button>
             </div>
