@@ -18,17 +18,69 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Database structure
 
-To learn more about Next.js, take a look at the following resources:
+The database structure of this project is as following:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Table user {
+  id integer [primary key]
+  username string
+  email string
+  created_at timestamp
+}
 
-## Deploy on Vercel
+Table tweet {
+  id uuid [primary key]
+  text string
+  body text [note: 'Content of the tweet']
+  author_id integer
+  created_at timestamp
+  updated_at timestamp
+}
+Ref: tweet.author_id > user.id // many-to-one
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Table like {
+  id uuid [primary key]
+  user_id string
+  tweet_id string
+  created_at timestamp
+}
+Ref: like.user_id > user.id
+Ref: like.tweet_id > tweet.id
+
+
+Table hashtag {
+  id uuid [primary key]
+  name string
+}
+
+Ref: hashtag.id <> tweet.id
+
+Table repley {
+  id uuid [primary key]
+  text string
+  user_id string
+  tweet_id string
+  repley_id string
+}
+
+Ref: repley.user_id > user.id
+Ref: repley.tweet_id > tweet.id
+Ref: repley.repley_id <> repley.id
+
+Table bookmark {
+  id uuid [primary key]
+  user_id string
+  tweet_id string
+  created_at timestamp
+}
+
+Ref: bookmark.user_id > user.id
+Ref: bookmark.tweet_id > tweet.id
+
+```
+
+Checkout details in this link: https://dbdiagram.io/d/64aef97602bd1c4a5ef8f797

@@ -18,10 +18,9 @@ function MainComponent() {
         <div className="w-11 h-11 bg-slate-400 rounded-full flex-none"></div>
         {/* input tweet */}
         <form className="flex flex-col w-full h-full">
-          <input
-            type="text"
+          <textarea
             name="tweet"
-            className="w-full h-full text-2xl placeholder:text-gray-600 bg-transparent border-b-[0.5px] border-gray-600 p-4 outline-none border-none"
+            className="w-full h-full break-words resize-none text-2xl placeholder:text-gray-600 bg-transparent border-b-[0.5px] border-gray-600 p-4 outline-none border-none"
             placeholder="What's happening?"
           />
           <div className="w-full justify-between items-center flex">
