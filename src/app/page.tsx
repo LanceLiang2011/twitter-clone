@@ -31,7 +31,21 @@ export default function Home() {
             </div>
           </div>
           {/* Trending */}
-          <div></div>
+          <div className=" flex flex-col gap-1 rounded-xl bg-neutral-800/90 mt-4">
+            <h3 className=" font-bold text-xl p-4">What is happening</h3>
+            {/* Trending list */}
+            <div>
+              {Array.from({ length: 5 }).map((_, i) => (
+                <div
+                  key={i}
+                  className=" hover:bg-white/10 p-4 last:rounded-b-xl transition duration-200"
+                >
+                  <div className=" font-bold text-lg"># Trending {i + 1}</div>
+                  <div className=" text-xs text-neutral-400">34.1k</div>
+                </div>
+              ))}
+            </div>
+          </div>
           {/* Who to follow */}
           <div></div>
         </section>
